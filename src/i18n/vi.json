@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "video": "Sản xuất Video",
+    "studio": "Dịch vụ Studio",
+    "equipment": "Thuê thiết bị",
+    "about": "Về chúng tôi",
+    "journal": "Nhật ký",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "eyebrow": "Đà Nẵng · Việt Nam",
+    "subtitle": "Sản xuất Video · Studio · Cho thuê máy quay",
+    "title1": "Biến thương hiệu",
+    "title2": "thành tác phẩm",
+    "title3": "điện ảnh.",
+    "desc": "Hãng sản xuất và trung tâm cho thuê thiết bị trọn gói tại miền Trung — sản xuất phim & quảng cáo, studio 360m², máy quay cinema & phụ kiện chuyên nghiệp.",
+    "ctaProject": "Bắt đầu dự án",
+    "ctaReel": "Xem Showreel",
+    "statYears": "NĂM KINH NGHIỆM",
+    "statSpace": "DIỆN TÍCH STUDIO",
+    "statProjects": "DỰ ÁN HOÀN THÀNH",
+    "statReviews": "ĐÁNH GIÁ GOOGLE"
+  },
+  "about": {
+    "eyebrow": "01 — Về chúng tôi",
+    "title1": "Chúng tôi biến ý tưởng thành",
+    "title2": "từng khung hình điện ảnh.",
+    "desc": "Hơn 6 năm tại bờ biển miền Trung, đội ngũ gắn kết dưới một mái nhà — biên kịch, đánh sáng, quay phim và chỉnh màu in-house trọn gói không qua trung gian.",
+    "quote": "“Get creative. Be original.”"
+  },
+  "services": {
+    "eyebrow": "02 — Dịch vụ của chúng tôi",
+    "title1": "Bốn chuyên môn,",
+    "title2": "một production house.",
+    "desc": "Từ kịch bản phân cảnh đầu tiên tới khâu chỉnh màu cuối cùng — hoặc cung cấp không gian và thiết bị khi bạn đã có ekip."
+  },
+  "equipment": {
+    "eyebrow": "03 — Thiết bị & Máy quay",
+    "title1": "Đối tác thiết bị của bạn tại",
+    "title2": "Miền Trung.",
+    "desc": "Mọi bộ thiết bị đều được kiểm tra, vệ sinh và sạc đầy trước khi xuất kho. Nhận trực tiếp tại Sơn Trà hoặc giao tận nơi.",
+    "cta": "Yêu cầu báo giá thuê"
+  },
+  "studio": {
+    "eyebrow": "04 — Không gian Studio",
+    "title1": "360m² nơi bạn có thể",
+    "title2": "tự do điều khiển ánh sáng.",
+    "desc": "Blackout hoàn toàn, trần cao và phông vô cực seamless — kèm set podcast & talking-head chuyên biệt. Đầy đủ grip, C-stands, đèn và nguồn điện. Thuê linh hoạt theo giờ.",
+    "cta": "Đặt lịch Studio"
+  },
+  "work": {
+    "eyebrow": "05 — Dự án tiêu biểu",
+    "title1": "Những khung hình",
+    "title2": "chúng tôi tự hào."
+  },
+  "reviews": {
+    "eyebrow": "07 — Đánh giá"
+  },
+  "contact": {
+    "eyebrow": "08 — Khởi động dự án",
+    "title1": "Cùng tạo nên điều gì đó",
+    "title2": "thật điện ảnh.",
+    "desc": "Chia sẻ về dự án của bạn — buổi quay, ngày thuê studio, hoặc danh sách thiết bị. Chúng tôi phản hồi trong vòng 24h làm việc.",
+    "btn": "Gửi yêu cầu dự án"
+  },
+  "common": {
+    "letsTalk": "Liên hệ ngay",
+    "menu": "Menu",
+    "close": "Đóng"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Home",
+    "video": "Video Production",
+    "studio": "Studio Services",
+    "equipment": "Equipment Rentals",
+    "about": "About",
+    "journal": "Journal",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Da Nang · Vietnam",
+    "subtitle": "Video Production · Studio · Camera Rental",
+    "title1": "We make brands",
+    "title2": "look",
+    "title3": "cinematic.",
+    "desc": "A full-service production house and rental base on Vietnam's central coast — film & commercial production, a 360m² studio, and cinema camera & equipment rental, under one roof.",
+    "ctaProject": "Start a Project",
+    "ctaReel": "Watch the Reel",
+    "statYears": "YEARS EXPERIENCE",
+    "statSpace": "STUDIO SPACE",
+    "statProjects": "PROJECTS",
+    "statReviews": "GOOGLE REVIEWS"
+  },
+  "about": {
+    "eyebrow": "01 — Who we are",
+    "title1": "We turn ideas into",
+    "title2": "cinematic frames.",
+    "desc": "Six years on the Central Vietnam coast, one crew under one roof — we write it, light it, shoot it and grade it in-house. TVCs, brand films and music videos, backed by a 360m² studio and the cinema gear to pull them off. End to end, no hand-offs.",
+    "quote": "“Get creative. Be original.”"
+  },
+  "services": {
+    "eyebrow": "02 — What we do",
+    "title1": "Four crafts,",
+    "title2": "one production house.",
+    "desc": "From the first storyboard to the final color pass — or just the space and the gear when you've got the crew."
+  },
+  "equipment": {
+    "eyebrow": "03 — Camera & Equipment",
+    "title1": "Your gear partner in",
+    "title2": "Central Vietnam.",
+    "desc": "Every kit is checked, cleaned and charged before it leaves the shelf. Pick up at our Sơn Trà base or add delivery.",
+    "cta": "Request a Rental Quote"
+  },
+  "studio": {
+    "eyebrow": "04 — The Studio",
+    "title1": "360m² you can",
+    "title2": "bend the light in.",
+    "desc": "Full blackout, high ceilings and a seamless cyclorama — plus a dedicated podcast & talking-head set. Grip, stands and power are already in the space. Book by the hour.",
+    "cta": "Reserve the Studio"
+  },
+  "work": {
+    "eyebrow": "05 — Selected work",
+    "title1": "Frames we're",
+    "title2": "proud of."
+  },
+  "reviews": {
+    "eyebrow": "07 — Reviews"
+  },
+  "contact": {
+    "eyebrow": "08 — Let's roll",
+    "title1": "Let's make something",
+    "title2": "cinematic.",
+    "desc": "Tell us about the project — a shoot, a studio day, or a gear list. We reply within one business day.",
+    "btn": "Send Project Brief"
+  },
+  "common": {
+    "letsTalk": "Let's talk",
+    "menu": "Menu",
+    "close": "Close"
+  }
+}

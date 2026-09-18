@@ -1,0 +1,41 @@
+export const SITE_CONFIG = {
+  name: "CINEFY & FUJIFILM RENTAL",
+  shortName: "CINEFY",
+  slogan: "Get creative. Be original.",
+  title: "CINEFY — Video, Studio, Podcast & Camera Rental Da Nang",
+  description:
+    "A full-service production house and rental base on Vietnam's central coast — film & commercial production, a 360m² studio, and cinema camera & equipment rental, under one roof.",
+  address: "179B Nguyễn Công Trứ, An Hải, Sơn Trà, Đà Nẵng",
+  city: "Đà Nẵng",
+  country: "Việt Nam",
+  email: "cinefy.production@gmail.com",
+  hotlineRental: "(+84) 77 977 1234",
+  hotlineStudio: "(+84) 965 408 519",
+  phoneNumbers: {
+    rental: "0779771234",
+    studio: "0965408519",
+  },
+  social: {
+    facebook: "https://www.facebook.com/Cinefy.production/",
+    instagram: "https://www.instagram.com/cinefy.stu/",
+    tiktok: "https://www.tiktok.com/@cinefy.pro",
+    youtube: "https://www.youtube.com/@cinefy.production",
+    zalo: "https://zalo.me/0779771234",
+    whatsapp: "https://wa.me/84779771234",
+  },
+  stats: {
+    yearsExperience: 6,
+    studioSpaceM2: 360,
+    projectsCompleted: 500,
+    rating: "5.0",
+    reviewCount: 178,
+  },
+  marqueeItems: [
+    "Commercials & TVC",
+    "Brand Films",
+    "Music Videos",
+    "Product & F&B",
+    "Documentary",
+    "Podcast",
+  ],
+};
