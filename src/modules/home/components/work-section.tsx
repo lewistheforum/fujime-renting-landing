@@ -1,154 +1,123 @@
 "use client";
 
-import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Play, Sparkles } from "lucide-react";
 
 interface WorkSectionProps {
   onOpenReel: () => void;
 }
 
 export function WorkSection({ onOpenReel }: WorkSectionProps) {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
+
+  const sampleFrames = [
+    {
+      img: "/images/rig-sea0877.jpg",
+      titleVi: "Hoàng hôn biển Mỹ Khê",
+      titleEn: "Sunset at My Khe Beach",
+      camera: "FUJIFILM X-T5",
+      recipe: "Classic Chrome Warm",
+      tagVi: "Chụp dạo phố & biển",
+      tagEn: "Travel & Coastal",
+    },
+    {
+      img: "/images/mv-set3c9e.jpg",
+      titleVi: "Chân dung nàng thơ phố cổ",
+      titleEn: "Hoi An Old Town Portrait",
+      camera: "FUJIFILM X-T5 + 56mm f/1.2",
+      recipe: "Astia Dreamy Skin",
+      tagVi: "Xóa phông trong trẻo",
+      tagEn: "Dreamy Bokeh",
+    },
+    {
+      img: "/images/studio-setaaf7.jpg",
+      titleVi: "Lookbook thời trang Studio 360m²",
+      titleEn: "Studio 360m² Fashion Lookbook",
+      camera: "FUJIFILM GFX 100 II",
+      recipe: "Nostalgic Negative",
+      tagVi: "Độ chi tiết 102MP",
+      tagEn: "102MP High Detail",
+    },
+    {
+      img: "/images/equip-feature28c4.jpg",
+      titleVi: "Thước phim tài liệu nghệ thuật",
+      titleEn: "Documentary Film Reel",
+      camera: "FUJIFILM X-H2S + Cine Rig",
+      recipe: "F-Log2 Film Grade",
+      tagVi: "Video 6.2K 10-bit",
+      tagEn: "6.2K Cinema Video",
+    },
+  ];
 
   return (
-    <section id="work" className="py-24 md:py-32 relative bg-bg">
-      <div className="max-w-7xl mx-auto px-5 md:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+    <section id="work" className="py-20 md:py-28 bg-bg-ground relative">
+      <div className="container-editorial">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <p className="eyebrow mb-4 font-mono text-xs text-orange tracking-widest uppercase">
-              {t("work.eyebrow")}
-            </p>
-            <h2
-              className="h-display text-ink font-display font-semibold"
-              style={{ fontSize: "clamp(2rem, 5.5vw, 4.4rem)", lineHeight: 1.1 }}
-            >
+            <div className="inline-flex items-center gap-2 mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-dusty-rose" />
+              <p className="font-mono text-xs uppercase tracking-widest text-accent-terracotta font-semibold">
+                {t("work.eyebrow")}
+              </p>
+            </div>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-text-primary leading-tight">
               {t("work.title1")}{" "}
-              <span className="serif-i text-orange italic font-serif">
+              <span className="font-brand text-accent-terracotta font-normal">
                 {t("work.title2")}
               </span>
             </h2>
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            <span className="font-mono text-xs tracking-widest px-3.5 py-1.5 rounded-full border border-orange/50 text-orange bg-orange/10 font-medium">
-              ALL
-            </span>
-            <span className="font-mono text-xs tracking-widest px-3.5 py-1.5 rounded-full border border-line text-muted">
-              COMMERCIALS
-            </span>
-            <span className="font-mono text-xs tracking-widest px-3.5 py-1.5 rounded-full border border-line text-muted">
-              F&amp;B
-            </span>
-            <span className="font-mono text-xs tracking-widest px-3.5 py-1.5 rounded-full border border-line text-muted">
-              MUSIC
-            </span>
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={onOpenReel}
+              className="btn-primary-terracotta text-xs sm:text-sm py-2.5 px-5 shadow-xs"
+            >
+              <Play className="w-3.5 h-3.5 fill-current" />
+              <span>{locale === "vi" ? "Xem Showreel tiệm" : "Watch Studio Reel"}</span>
+            </button>
           </div>
         </div>
 
-        {/* Selected work gallery grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[230px]">
-          {/* Main Showreel Card (spans 2x2) */}
-          <button
-            type="button"
-            onClick={onOpenReel}
-            className="filmframe col-span-2 row-span-2 relative rounded-2xl overflow-hidden border border-line group text-left cursor-pointer focus:outline-none"
-            data-reel
-          >
+        {/* Gallery Grid: Subtle photo mat / contact sheet cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {sampleFrames.map((item, idx) => (
             <div
-              className="ff-glow absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/rig-sea0877.jpg')" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            <div className="ff-rec absolute top-4 left-4 flex items-center gap-1.5 font-mono text-[10px] tracking-widest text-red-500 bg-black/60 px-2.5 py-1 rounded-full border border-line">
-              <i className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse inline-block" />
-              REC 4K
+              key={idx}
+              className="card-surface p-3 rounded-2xl flex flex-col justify-between group hover:border-accent-terracotta/40 transition-all shadow-xs hover:shadow-md"
+            >
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-surface-raised mb-3">
+                <img
+                  src={item.img}
+                  alt={item.titleVi}
+                  className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-500"
+                />
+                <span className="absolute top-2.5 left-2.5 tag-badge-peach text-[10px] font-mono shadow-xs">
+                  {locale === "vi" ? item.tagVi : item.tagEn}
+                </span>
+              </div>
+
+              <div className="px-1.5 pb-1">
+                <h3 className="font-display font-semibold text-sm sm:text-base text-text-primary mb-1">
+                  {locale === "vi" ? item.titleVi : item.titleEn}
+                </h3>
+                <div className="flex items-center justify-between text-xs font-mono text-text-muted mt-2 pt-2 border-t border-border-subtle/60">
+                  <span className="text-accent-terracotta font-medium">{item.camera}</span>
+                  <span className="text-[11px] text-text-muted">{item.recipe}</span>
+                </div>
+              </div>
             </div>
+          ))}
+        </div>
 
-            <div className="absolute inset-0 grid place-items-center">
-              <span
-                className="w-20 h-20 rounded-full grid place-items-center border border-white/30 backdrop-blur-sm group-hover:scale-110 transition-transform duration-500"
-                style={{ background: "rgba(255,107,26,.22)" }}
-              >
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </span>
-            </div>
-
-            <span className="ff-label absolute bottom-4 left-4 text-xs sm:text-sm font-mono text-white">
-              Showreel — <span className="text-orange underline font-semibold">tap to watch</span>
-            </span>
-          </button>
-
-          <Link
-            href="/video-production"
-            className="filmframe relative rounded-2xl overflow-hidden border border-line group"
-          >
-            <div
-              className="ff-glow absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/op-sea8211.jpg')" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <span className="ff-label absolute bottom-3 left-3 text-xs font-mono text-white/90">
-              On location
-            </span>
-          </Link>
-
-          <Link
-            href="/video-production"
-            className="filmframe relative rounded-2xl overflow-hidden border border-line group"
-          >
-            <div
-              className="ff-glow absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/rig-pictor601b.jpg')" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <span className="ff-label absolute bottom-3 left-3 text-xs font-mono text-white/90">
-              Cinema gear
-            </span>
-          </Link>
-
-          <Link
-            href="/video-production"
-            className="filmframe col-span-2 relative rounded-2xl overflow-hidden border border-line group"
-          >
-            <div
-              className="ff-glow absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/studio-setaaf7.jpg')" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <span className="ff-label absolute bottom-3 left-3 text-xs font-mono text-white/90">
-              Studio production · 360m²
-            </span>
-          </Link>
-
-          <Link
-            href="/video-production"
-            className="filmframe col-span-2 relative rounded-2xl overflow-hidden border border-line group"
-          >
-            <div
-              className="ff-glow absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/work-fireaaf7.jpg')" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <span className="ff-label absolute bottom-3 left-3 text-xs font-mono text-white/90">
-              VFX · Set build
-            </span>
-          </Link>
-
-          <Link
-            href="/video-production"
-            className="filmframe relative rounded-2xl overflow-hidden border border-line group"
-          >
-            <div
-              className="ff-glow absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/work-balconyaaf7.jpg')" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <span className="ff-label absolute bottom-3 left-3 text-xs font-mono text-white/90">
-              Resort · Commercial
-            </span>
-          </Link>
+        {/* Note about recipes preloaded */}
+        <div className="mt-8 text-center text-xs text-text-muted font-light">
+          <Sparkles className="w-3.5 h-3.5 text-accent-peach inline mr-1.5" />
+          {locale === "vi"
+            ? "Mọi máy ảnh Fujifilm thuê tại tiệm đều được nhân viên cài sẵn các công thức màu film hot nhất (Classic Chrome, Nostalgic Neg, Kodak Portra Sim) miễn phí!"
+            : "All Fujifilm rental cameras come pre-loaded with curated vintage film simulation recipes ready for your shoot!"}
         </div>
       </div>
     </section>

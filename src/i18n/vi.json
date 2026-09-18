@@ -3,69 +3,71 @@
     "home": "Trang chủ",
     "video": "Sản xuất Video",
     "studio": "Dịch vụ Studio",
-    "equipment": "Thuê thiết bị",
-    "about": "Về chúng tôi",
-    "journal": "Nhật ký",
-    "contact": "Liên hệ"
+    "equipment": "Tủ máy ảnh & Thiết bị",
+    "about": "Góc tiệm & Địa chỉ",
+    "journal": "Nhật ký ảnh",
+    "contact": "Liên hệ & Zalo"
   },
   "hero": {
-    "eyebrow": "Đà Nẵng · Việt Nam",
-    "subtitle": "Sản xuất Video · Studio · Cho thuê máy quay",
-    "title1": "Biến thương hiệu",
-    "title2": "thành tác phẩm",
-    "title3": "điện ảnh.",
-    "desc": "Hãng sản xuất và trung tâm cho thuê thiết bị trọn gói tại miền Trung — sản xuất phim & quảng cáo, studio 360m², máy quay cinema & phụ kiện chuyên nghiệp.",
-    "ctaProject": "Bắt đầu dự án",
-    "ctaReel": "Xem Showreel",
-    "statYears": "NĂM KINH NGHIỆM",
-    "statSpace": "DIỆN TÍCH STUDIO",
-    "statProjects": "DỰ ÁN HOÀN THÀNH",
-    "statReviews": "ĐÁNH GIÁ GOOGLE"
+    "eyebrow": "Sơn Trà · Đà Nẵng",
+    "subtitle": "Tiệm thuê máy ảnh & Không gian sáng tạo",
+    "titleBrand": "Cùng bạn ghi lại",
+    "titleAccent": "những khung hình",
+    "titleEnd": "thơ nhất.",
+    "desc": "Thuê máy ảnh Fujifilm, ống kính cinema và studio 360m² trọn gói tại Đà Nẵng. Giá ngày minh bạch, sẵn sàng phụ kiện, hỗ trợ công thức màu film đẹp ngay khi bấm máy.",
+    "ctaRent": "Chọn máy thuê ngay",
+    "ctaZalo": "Nhắn Zalo tư vấn",
+    "badge1": "Đủ 2 pin sạc & thẻ nhớ",
+    "badge2": "Giao tận nơi Đà Nẵng - Hội An",
+    "badge3": "Cài sẵn màu film cho bạn mới"
   },
   "about": {
-    "eyebrow": "01 — Về chúng tôi",
-    "title1": "Chúng tôi biến ý tưởng thành",
-    "title2": "từng khung hình điện ảnh.",
-    "desc": "Hơn 6 năm tại bờ biển miền Trung, đội ngũ gắn kết dưới một mái nhà — biên kịch, đánh sáng, quay phim và chỉnh màu in-house trọn gói không qua trung gian.",
-    "quote": "“Get creative. Be original.”"
+    "eyebrow": "Góc nhỏ tại Sơn Trà",
+    "title1": "Tiệm máy ảnh sinh ra từ tình yêu",
+    "title2": "những hạt màu hoài niệm.",
+    "desc": "Tụi mình ở đây để việc cầm trên tay một chiếc máy ảnh xịn trở nên dễ dàng và nhẹ nhàng nhất. Dù bạn đi du lịch Đà Nẵng, chụp kỷ yếu, đi café cuối tuần hay quay TikTok, tụi mình luôn chuẩn bị máy sạch sẽ, pin sạc 100% và chỉ dẫn tận tình.",
+    "quote": "“Cứ thỏa sức sáng tạo, phần thiết bị để tụi mình lo.”"
   },
   "services": {
-    "eyebrow": "02 — Dịch vụ của chúng tôi",
-    "title1": "Bốn chuyên môn,",
-    "title2": "một production house.",
-    "desc": "Từ kịch bản phân cảnh đầu tiên tới khâu chỉnh màu cuối cùng — hoặc cung cấp không gian và thiết bị khi bạn đã có ekip."
+    "eyebrow": "Dịch vụ tại Fujime",
+    "title1": "Không gian & Thiết bị",
+    "title2": "cho mọi ý tưởng sáng tạo.",
+    "desc": "Từ chiếc máy ảnh nhỏ gọn bỏ túi cho chuyến đi, đến phim trường 360m² và ekip sản xuất video chuyên nghiệp."
   },
   "equipment": {
-    "eyebrow": "03 — Thiết bị & Máy quay",
-    "title1": "Đối tác thiết bị của bạn tại",
-    "title2": "Miền Trung.",
-    "desc": "Mọi bộ thiết bị đều được kiểm tra, vệ sinh và sạc đầy trước khi xuất kho. Nhận trực tiếp tại Sơn Trà hoặc giao tận nơi.",
-    "cta": "Yêu cầu báo giá thuê"
+    "eyebrow": "Tủ máy sẵn sàng",
+    "title1": "Chọn chiếc máy vừa tay",
+    "title2": "cho chuyến đi của bạn.",
+    "desc": "Mọi bộ máy đều là combo Ready-to-Shoot: đã kèm 2 pin, sạc đôi, thẻ nhớ tốc độ cao và túi đựng chống sốc.",
+    "cta": "Xem tất cả máy ảnh",
+    "askAdvice": "Chưa biết chọn máy nào? Nhắn Zalo tụi mình gợi ý ngay!"
   },
   "studio": {
-    "eyebrow": "04 — Không gian Studio",
-    "title1": "360m² nơi bạn có thể",
-    "title2": "tự do điều khiển ánh sáng.",
-    "desc": "Blackout hoàn toàn, trần cao và phông vô cực seamless — kèm set podcast & talking-head chuyên biệt. Đầy đủ grip, C-stands, đèn và nguồn điện. Thuê linh hoạt theo giờ.",
-    "cta": "Đặt lịch Studio"
+    "eyebrow": "Phim trường 360m²",
+    "title1": "Không gian studio vô cực",
+    "title2": "tại Sơn Trà, Đà Nẵng.",
+    "desc": "Phông trắng cyclorama vô cực, trần cao thoáng đãng, điện 3 pha và phòng podcast/phỏng vấn setup sẵn. Đặt lịch linh hoạt theo giờ cho cá nhân và nhãn hàng.",
+    "cta": "Đặt lịch Studio qua Zalo"
   },
   "work": {
-    "eyebrow": "05 — Dự án tiêu biểu",
-    "title1": "Những khung hình",
-    "title2": "chúng tôi tự hào."
+    "eyebrow": "Khung hình truyền cảm hứng",
+    "title1": "Màu ảnh thực tế",
+    "title2": "chụp từ máy của tiệm."
   },
   "reviews": {
-    "eyebrow": "07 — Đánh giá"
+    "eyebrow": "Chia sẻ từ khách thuê",
+    "title1": "Những trải nghiệm",
+    "title2": "ấm áp cùng tiệm."
   },
   "contact": {
-    "eyebrow": "08 — Khởi động dự án",
-    "title1": "Cùng tạo nên điều gì đó",
-    "title2": "thật điện ảnh.",
-    "desc": "Chia sẻ về dự án của bạn — buổi quay, ngày thuê studio, hoặc danh sách thiết bị. Chúng tôi phản hồi trong vòng 24h làm việc.",
-    "btn": "Gửi yêu cầu dự án"
+    "eyebrow": "Kết nối với tụi mình",
+    "title1": "Ghé tiệm hoặc nhắn Zalo",
+    "title2": "để giữ máy nhé.",
+    "desc": "179B Nguyễn Công Trứ, Sơn Trà, Đà Nẵng. Mở cửa 08:00 – 21:00 hàng ngày. Phản hồi nhanh trong 5–15 phút qua Zalo và Hotline.",
+    "btn": "Gửi tin nhắn cho tiệm"
   },
   "common": {
-    "letsTalk": "Liên hệ ngay",
+    "letsTalk": "Nhắn Zalo tiệm",
     "menu": "Menu",
     "close": "Đóng"
   }

@@ -36,7 +36,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   return (
     <div
       id="mobileMenu"
-      className="menu-overlay fixed inset-0 z-[110] bg-[#0a0a0b]/98 backdrop-blur-2xl flex flex-col transition-opacity duration-300"
+      className="menu-overlay fixed inset-0 z-[110] bg-[#F6F0E7]/98 backdrop-blur-2xl flex flex-col transition-opacity duration-300"
       style={{ opacity: isOpen ? 1 : 0, pointerEvents: isOpen ? "auto" : "none" }}
     >
       <div className="menu-inner max-w-7xl mx-auto px-5 md:px-8 h-full flex flex-col w-full">
@@ -44,7 +44,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <div className="flex items-center justify-between py-5 border-b border-line">
           <Link href="/" onClick={onClose} className="flex items-center gap-2.5">
             <span className="font-display font-bold text-2xl tracking-tight text-ink flex items-center gap-1.5">
-              <span className="text-orange">FUJIFILM</span> RENTAL
+              <span className="text-orange">Fujime</span> Renting
             </span>
           </Link>
           <button

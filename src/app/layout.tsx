@@ -5,12 +5,11 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { QuickContact } from "@/components/quick-contact";
-import { CustomCursor } from "@/components/custom-cursor";
 
 export const metadata: Metadata = {
-  title: "CINEFY & FUJIFILM RENTAL — Video, Studio, Podcast & Camera Rental Da Nang",
+  title: "Fujime Renting — Tiệm Thuê Máy Ảnh & Studio Đà Nẵng",
   description:
-    "A full-service production house and rental base on Vietnam's central coast — film & commercial production, a 360m² studio, and cinema camera & equipment rental, under one roof.",
+    "Tiệm cho thuê máy ảnh Fujifilm, thiết bị điện ảnh và studio 360m² tại Sơn Trà, Đà Nẵng. Combo máy sẵn sàng bấm máy cho chuyến đi và dự án sáng tạo.",
   icons: {
     icon: "/brand/cinefy-logo.svg",
   },
@@ -22,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth dark">
+    <html lang="vi" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -31,8 +30,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-bg text-ink min-h-screen relative antialiased selection:bg-orange/30 selection:text-white">
-        <CustomCursor />
+      <body className="bg-bg-ground text-text-primary min-h-screen relative antialiased selection:bg-accent-terracotta/20 selection:text-text-primary">
         <LanguageProvider>
           <Header />
           <div className="flex-1 w-full min-h-screen">{children}</div>

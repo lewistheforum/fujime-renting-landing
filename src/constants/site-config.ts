@@ -1,10 +1,10 @@
 export const SITE_CONFIG = {
-  name: "CINEFY & FUJIFILM RENTAL",
-  shortName: "CINEFY",
+  name: "Fujime Renting",
+  shortName: "Fujime",
   slogan: "Get creative. Be original.",
-  title: "CINEFY — Video, Studio, Podcast & Camera Rental Da Nang",
+  title: "Fujime Renting — Tiệm Thuê Máy Ảnh & Studio Đà Nẵng",
   description:
-    "A full-service production house and rental base on Vietnam's central coast — film & commercial production, a 360m² studio, and cinema camera & equipment rental, under one roof.",
+    "Tiệm cho thuê máy ảnh Fujifilm, ống kính cinema và studio 360m² tại Sơn Trà, Đà Nẵng. Combo máy sẵn sàng bấm máy cho chuyến đi và dự án sáng tạo.",
   address: "179B Nguyễn Công Trứ, An Hải, Sơn Trà, Đà Nẵng",
   city: "Đà Nẵng",
   country: "Việt Nam",

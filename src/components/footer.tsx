@@ -15,7 +15,7 @@ export function Footer() {
           <div className="max-w-sm">
             <Link href="/" className="inline-block mb-5">
               <span className="font-display font-black text-2xl tracking-tighter text-ink flex items-center gap-1.5">
-                <span className="text-orange">FUJIFILM</span> RENTAL
+                <span className="text-orange">Fujime</span> Renting
               </span>
             </Link>
             <p className="text-muted text-sm leading-relaxed mb-6">

@@ -2,99 +2,98 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SITE_CONFIG } from "@/constants/site-config";
+import { Heart, Sparkles, MapPin, Coffee } from "lucide-react";
 
 export function AboutSection() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
-    <section id="about" className="py-24 md:py-32 relative overflow-hidden bg-bg">
-      <div className="max-w-7xl mx-auto px-5 md:px-8">
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-center">
+    <section id="about" className="py-20 md:py-28 bg-bg-ground relative overflow-hidden">
+      <div className="container-editorial">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
+          {/* Left Column: Story & Philosophy */}
           <div>
-            <p className="eyebrow mb-5 font-mono text-xs text-orange tracking-widest uppercase">
-              {t("about.eyebrow")}
-            </p>
-            <h2
-              className="h-display text-ink font-display font-semibold mb-7"
-              style={{ fontSize: "clamp(2rem, 5vw, 4rem)", lineHeight: 1.15 }}
-            >
+            <div className="inline-flex items-center gap-2 mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-terracotta" />
+              <p className="font-mono text-xs uppercase tracking-widest text-accent-terracotta font-semibold">
+                {t("about.eyebrow")}
+              </p>
+            </div>
+
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-text-primary leading-tight mb-6">
               {t("about.title1")}{" "}
-              <span className="serif-i text-orange italic font-serif">
+              <span className="font-brand text-accent-terracotta font-normal block sm:inline">
                 {t("about.title2")}
               </span>
             </h2>
-            <p
-              className="text-muted leading-relaxed mb-6 max-w-xl text-base sm:text-lg font-light"
-              style={{ lineHeight: 1.85 }}
-            >
+
+            <p className="text-text-muted leading-relaxed mb-6 max-w-xl text-base sm:text-lg font-light">
               {t("about.desc")}
             </p>
-            <p className="serif-i text-2xl text-ink font-serif italic mb-9 leading-relaxed">
+
+            <blockquote className="border-l-2 border-accent-terracotta pl-4 my-6 italic font-display text-xl text-text-primary">
               {t("about.quote")}
-            </p>
-            <div className="flex flex-wrap gap-3.5">
-              <Link
-                href="/#services"
-                className="btn btn-ghost px-6 py-3 rounded-full border border-line hover:border-orange text-sm font-semibold tracking-wide text-ink hover:text-orange transition-colors"
-              >
-                Our Services
-              </Link>
-              <Link
-                href="/video-production"
-                className="btn btn-ghost px-6 py-3 rounded-full border border-line hover:border-orange text-sm font-semibold tracking-wide text-ink hover:text-orange transition-colors"
-              >
-                See the work
-              </Link>
+            </blockquote>
+
+            <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-border-subtle">
+              <div className="flex items-start gap-3">
+                <Coffee className="w-5 h-5 text-accent-terracotta shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-medium text-sm text-text-primary">
+                    {locale === "vi" ? "Ghé tiệm trò chuyện" : "Drop by for coffee"}
+                  </h4>
+                  <p className="text-xs text-text-muted mt-0.5">
+                    {locale === "vi" ? "Thử máy thoải mái trước khi quyết định thuê" : "Test cameras freely before you rent"}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <Heart className="w-5 h-5 text-accent-peach shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-medium text-sm text-text-primary">
+                    {locale === "vi" ? "Chỉ dẫn tận tâm" : "Friendly guidance"}
+                  </h4>
+                  <p className="text-xs text-text-muted mt-0.5">
+                    {locale === "vi" ? "Dù bạn chưa từng cầm máy ảnh bao giờ" : "Even if it's your first time shooting"}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Film frames gallery */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="filmframe h-60 relative rounded-2xl overflow-hidden border border-line group">
-              <div
-                className="ff-glow absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: "url('/images/mv-set3c9e.jpg')" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="ff-rec absolute top-3 left-3 flex items-center gap-1.5 font-mono text-[10px] tracking-widest text-red-500 bg-black/60 px-2 py-1 rounded-full border border-line">
-                <i className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse inline-block" />
-                REC
+          {/* Right Column: Warm Analog Photo Grid */}
+          <div className="grid grid-cols-2 gap-4 relative">
+            {/* Scrapbook Tape Detail */}
+            <div
+              className="absolute -top-3 left-6 w-20 h-5 bg-[#EFE6D8]/80 backdrop-blur-sm border-x border-[#DCCBBC]/70 -rotate-3 z-10 pointer-events-none"
+              aria-hidden="true"
+            />
+
+            <div className="card-surface p-2.5 rounded-xl shadow-xs">
+              <div className="aspect-[4/5] rounded-lg overflow-hidden bg-surface-raised mb-2">
+                <img
+                  src="/images/mv-set3c9e.jpg"
+                  alt="Không gian làm việc sáng tạo tại tiệm CINEFY"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <span className="ff-label absolute bottom-3 left-3 text-xs font-mono text-white/90">
-                On set · Da Nang
+              <span className="text-[11px] font-mono text-text-muted block text-center">
+                {locale === "vi" ? "Góc chuẩn bị máy" : "Gear prep bench"}
               </span>
             </div>
 
-            <div className="filmframe h-40 mt-8 relative rounded-2xl overflow-hidden border border-line group">
-              <div
-                className="ff-glow absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: "url('/images/crew-on-location3c9e.jpg')" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <span className="ff-label absolute bottom-3 left-3 text-xs font-mono text-white/90">
-                Behind the scenes
-              </span>
-            </div>
-
-            <div className="filmframe h-40 relative rounded-2xl overflow-hidden border border-line group">
-              <div
-                className="ff-glow absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: "url('/images/podcast-set3c9e.jpg')" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <span className="ff-label absolute bottom-3 left-3 text-xs font-mono text-white/90">
-                Talking-head
-              </span>
-            </div>
-
-            <div className="filmframe h-60 -mt-8 relative rounded-2xl overflow-hidden border border-line group">
-              <div
-                className="ff-glow absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: "url('/images/camera-rigaaf7.jpg')" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <span className="ff-label absolute bottom-3 left-3 text-xs font-mono text-white/90">
-                Camera dept
+            <div className="card-surface p-2.5 rounded-xl shadow-xs mt-6">
+              <div className="aspect-[4/5] rounded-lg overflow-hidden bg-surface-raised mb-2">
+                <img
+                  src="/images/equip-hero6c7f.jpg"
+                  alt="Ống kính và phụ kiện máy ảnh chính hãng"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="text-[11px] font-mono text-text-muted block text-center">
+                {locale === "vi" ? "Test thấu kính & sensor" : "Sensor & glass check"}
               </span>
             </div>
           </div>

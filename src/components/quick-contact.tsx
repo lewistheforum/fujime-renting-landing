@@ -35,7 +35,7 @@ export function QuickContact() {
       <a
         className="qc-phone"
         href={`tel:${SITE_CONFIG.phoneNumbers.rental}`}
-        aria-label="Call FujiFilm Rental"
+        aria-label="Call Fujime Renting"
       >
         <span className="qc-tip">Call · {SITE_CONFIG.hotlineRental}</span>
         <Phone className="w-5 h-5 text-orange" />

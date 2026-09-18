@@ -3,69 +3,71 @@
     "home": "Home",
     "video": "Video Production",
     "studio": "Studio Services",
-    "equipment": "Equipment Rentals",
-    "about": "About",
-    "journal": "Journal",
-    "contact": "Contact"
+    "equipment": "Camera Rentals",
+    "about": "About & Studio",
+    "journal": "Film Journal",
+    "contact": "Contact & Zalo"
   },
   "hero": {
-    "eyebrow": "Da Nang · Vietnam",
-    "subtitle": "Video Production · Studio · Camera Rental",
-    "title1": "We make brands",
-    "title2": "look",
-    "title3": "cinematic.",
-    "desc": "A full-service production house and rental base on Vietnam's central coast — film & commercial production, a 360m² studio, and cinema camera & equipment rental, under one roof.",
-    "ctaProject": "Start a Project",
-    "ctaReel": "Watch the Reel",
-    "statYears": "YEARS EXPERIENCE",
-    "statSpace": "STUDIO SPACE",
-    "statProjects": "PROJECTS",
-    "statReviews": "GOOGLE REVIEWS"
+    "eyebrow": "Sơn Trà · Da Nang",
+    "subtitle": "Curated Camera Rental Studio & Creative Hub",
+    "titleBrand": "Capture your best moments",
+    "titleAccent": "with cinematic warmth",
+    "titleEnd": "in Da Nang.",
+    "desc": "Rent curated Fujifilm cameras, cinema glass, and a 360m² cyclorama studio in Da Nang. Transparent daily rates, ready-to-shoot kits, and preloaded film simulation recipes.",
+    "ctaRent": "Browse Cameras",
+    "ctaZalo": "Chat on Zalo for Advice",
+    "badge1": "Includes 2 batteries, charger & SD card",
+    "badge2": "Local delivery in Da Nang & Hoi An",
+    "badge3": "Film recipes ready for beginners"
   },
   "about": {
-    "eyebrow": "01 — Who we are",
-    "title1": "We turn ideas into",
-    "title2": "cinematic frames.",
-    "desc": "Six years on the Central Vietnam coast, one crew under one roof — we write it, light it, shoot it and grade it in-house. TVCs, brand films and music videos, backed by a 360m² studio and the cinema gear to pull them off. End to end, no hand-offs.",
-    "quote": "“Get creative. Be original.”"
+    "eyebrow": "Our Sơn Trà Studio",
+    "title1": "A camera studio born from",
+    "title2": "the love of analog warmth.",
+    "desc": "We believe creating memorable photos and videos should feel joyful, accessible, and effortless. Whether you're exploring Da Nang, café hopping in Hoi An, or shooting lookbooks, our cameras are fully tested, charged to 100%, and ready to shoot.",
+    "quote": "“Focus on your vision — we take care of the gear.”"
   },
   "services": {
-    "eyebrow": "02 — What we do",
-    "title1": "Four crafts,",
-    "title2": "one production house.",
-    "desc": "From the first storyboard to the final color pass — or just the space and the gear when you've got the crew."
+    "eyebrow": "What We Offer",
+    "title1": "Studio & Equipment",
+    "title2": "for every creative journey.",
+    "desc": "From pocket-friendly travel cameras to a 360m² cyclorama studio and full-scale commercial video production."
   },
   "equipment": {
-    "eyebrow": "03 — Camera & Equipment",
-    "title1": "Your gear partner in",
-    "title2": "Central Vietnam.",
-    "desc": "Every kit is checked, cleaned and charged before it leaves the shelf. Pick up at our Sơn Trà base or add delivery.",
-    "cta": "Request a Rental Quote"
+    "eyebrow": "Curated Gear",
+    "title1": "Find the perfect camera",
+    "title2": "for your next shoot.",
+    "desc": "All packages are ready-to-shoot complete kits: includes 2 batteries, dual charger, high-speed memory card, and padded protective carry bag.",
+    "cta": "View Full Gear Collection",
+    "askAdvice": "Unsure which camera to pick? Chat on Zalo for quick recommendations!"
   },
   "studio": {
-    "eyebrow": "04 — The Studio",
-    "title1": "360m² you can",
-    "title2": "bend the light in.",
-    "desc": "Full blackout, high ceilings and a seamless cyclorama — plus a dedicated podcast & talking-head set. Grip, stands and power are already in the space. Book by the hour.",
-    "cta": "Reserve the Studio"
+    "eyebrow": "360m² Studio Space",
+    "title1": "Seamless infinity cyclorama",
+    "title2": "in Sơn Trà, Da Nang.",
+    "desc": "Full white and black cyclorama, high ceilings, 3-phase power, and dedicated podcast talking-head set. Flexible hourly and daily bookings for creators and brands.",
+    "cta": "Reserve the Studio on Zalo"
   },
   "work": {
-    "eyebrow": "05 — Selected work",
-    "title1": "Frames we're",
-    "title2": "proud of."
+    "eyebrow": "Inspiration Gallery",
+    "title1": "Real frames shot with",
+    "title2": "our rental cameras."
   },
   "reviews": {
-    "eyebrow": "07 — Reviews"
+    "eyebrow": "Renter Stories",
+    "title1": "Warm words from",
+    "title2": "fellow creators."
   },
   "contact": {
-    "eyebrow": "08 — Let's roll",
-    "title1": "Let's make something",
-    "title2": "cinematic.",
-    "desc": "Tell us about the project — a shoot, a studio day, or a gear list. We reply within one business day.",
-    "btn": "Send Project Brief"
+    "eyebrow": "Get in Touch",
+    "title1": "Visit our base or message us",
+    "title2": "to reserve your dates.",
+    "desc": "179B Nguyễn Công Trứ, Sơn Trà, Da Nang. Open daily 08:00 – 21:00. Fast response within 5–15 minutes via Zalo and Hotline.",
+    "btn": "Send Inquiry"
   },
   "common": {
-    "letsTalk": "Let's talk",
+    "letsTalk": "Chat on Zalo",
     "menu": "Menu",
     "close": "Close"
   }
