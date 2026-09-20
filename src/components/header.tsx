@@ -77,6 +77,39 @@ export function Header() {
           >
             {locale === "vi" ? "Sản phẩm" : "Products"}
           </Link>
+
+          <Link
+            href="/products"
+            className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
+              pathname.startsWith("/products")
+                ? "bg-accent-terracotta text-white font-semibold shadow-xs"
+                : "text-text-muted hover:text-text-primary hover:bg-surface-raised/60"
+            }`}
+          >
+            {locale === "vi" ? "Tra cứu" : "Search"}
+          </Link>
+
+           <Link
+            href="/products"
+            className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
+              pathname.startsWith("/products")
+                ? "bg-accent-terracotta text-white font-semibold shadow-xs"
+                : "text-text-muted hover:text-text-primary hover:bg-surface-raised/60"
+            }`}
+          >
+            {locale === "vi" ? "Hướng dẫn" : "Guidelines"}
+          </Link>
+
+          <Link
+            href="/products"
+            className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
+              pathname.startsWith("/products")
+                ? "bg-accent-terracotta text-white font-semibold shadow-xs"
+                : "text-text-muted hover:text-text-primary hover:bg-surface-raised/60"
+            }`}
+          >
+            {locale === "vi" ? "Liên hệ" : "Contact"}
+          </Link>
         </div>
 
         {/* Right: Language toggle & Quick Zalo Concierge */}
