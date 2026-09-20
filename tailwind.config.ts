@@ -51,8 +51,19 @@ const config: Config = {
         "marquee-scroll": "marquee-scroll 45s linear infinite",
         "marquee-right": "marquee-right 35s linear infinite",
         "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        // Doubles as the 3D viewer's auto-switch timer (see camera-viewer-3d.tsx)
+        "model-progress": "model-progress 10s linear forwards",
+        "auth-step-in": "auth-step-in 0.45s cubic-bezier(0.16, 1, 0.3, 1)",
       },
       keyframes: {
+        "auth-step-in": {
+          "0%": { opacity: "0", transform: "translateY(8px)", filter: "blur(2px)" },
+          "100%": { opacity: "1", transform: "translateY(0)", filter: "blur(0)" },
+        },
+        "model-progress": {
+          "0%": { transform: "scaleX(0)" },
+          "100%": { transform: "scaleX(1)" },
+        },
         "marquee-scroll": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },

@@ -188,9 +188,16 @@
     border-color: var(--accent-terracotta);
     box-shadow: 0 0 0 3px rgba(185, 104, 77, 0.15);
   }
+  /* Keep browser autofill on the cream surface instead of Chrome's blue/yellow */
+  .input-editorial:-webkit-autofill,
+  .input-editorial:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--text-primary);
+    box-shadow: 0 0 0 1000px var(--surface) inset;
+    caret-color: var(--accent-terracotta);
+  }
   .input-editorial::placeholder {
     color: var(--text-muted);
-    opacity: 0.7;
+    opacity: 1;
   }
 
   /* Pricing & Metadata */

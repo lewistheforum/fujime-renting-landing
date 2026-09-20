@@ -5,12 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SITE_CONFIG } from "@/constants/site-config";
-import { MessageCircle } from "lucide-react";
+import { LogIn } from "lucide-react";
 
 export function Header() {
   const { locale, setLocale } = useLanguage();
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const onAuthPage = ["/login", "/register", "/forgot-password"].includes(pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -112,16 +113,19 @@ export function Header() {
             </button>
           </div>
 
-          {/* Quick Zalo Hold Button */}
-          <a
-            href={SITE_CONFIG.social.zalo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary-terracotta text-xs py-2 px-3.5 sm:px-4 hidden sm:inline-flex items-center gap-1.5 shadow-xs"
+          {/* Account entry */}
+          <Link
+            href="/login"
+            aria-current={onAuthPage ? "page" : undefined}
+            className={
+              onAuthPage
+                ? "text-xs font-medium py-2 px-3.5 sm:px-4 rounded-full hidden sm:inline-flex items-center gap-1.5 bg-surface-raised text-accent-terracotta border border-border-subtle"
+                : "btn-primary-terracotta text-xs py-2 px-3.5 sm:px-4 hidden sm:inline-flex items-center gap-1.5 shadow-xs"
+            }
           >
-            <MessageCircle className="w-3.5 h-3.5" />
-            <span>{locale === "vi" ? "Nhắn Zalo" : "Zalo Chat"}</span>
-          </a>
+            <LogIn className="w-3.5 h-3.5" aria-hidden="true" />
+            <span>{locale === "vi" ? "Đăng nhập" : "Log In"}</span>
+          </Link>
         </div>
       </nav>
     </header>
