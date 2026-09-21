@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { StudioHero } from "./components/studio-hero";
 import { StudioNoticeBar } from "./components/studio-notice-bar";
-import { StudioServicesShowcase } from "./components/studio-services-showcase";
+import { HomeFeaturedProducts } from "./components/home-featured-products";
 import { StudioSpaceFeature } from "./components/studio-space-feature";
 import { RentalTicketFlow } from "./components/rental-ticket-flow";
 import { LabStory } from "./components/lab-story";
@@ -25,13 +25,13 @@ export default function HomeModule() {
       {/* 2. Studio Notice Bar (Infinite marquee to the right) */}
       <StudioNoticeBar />
 
-      {/* 3. Studio Services Ecosystem (Core Homepage Focus) */}
-      <StudioServicesShowcase />
+      {/* 3. Featured 6 Camera Kits with "Xem thêm" link to /products */}
+      <HomeFeaturedProducts />
 
       {/* 4. Studio 360m² Cyclorama Space Feature */}
       <StudioSpaceFeature />
 
-      {/* 5. The 3-Step Rental Ticket Flow & Student Deposit Policy */}
+      {/* 5. The 3-Step Rental Ticket Flow, Deposit Policy & Customer Reviews */}
       <RentalTicketFlow />
 
       {/* 6. Our Sơn Trà Lab Story & 5-minute Onboarding */}

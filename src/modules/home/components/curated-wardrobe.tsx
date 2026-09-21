@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SITE_CONFIG } from "@/constants/site-config";
 import { VERIFIED_CAMERA_KITS, CameraKit } from "@/constants/homepage-data";
@@ -106,9 +107,12 @@ export function CuratedWardrobe({ initialVibe = "all" }: CuratedWardrobeProps) {
                   <span className="text-[11px] font-mono uppercase tracking-widest text-text-muted block">
                     {kit.brand}
                   </span>
-                  <h3 className="font-display font-semibold text-lg text-text-primary group-hover:text-accent-terracotta transition-colors">
+                  <Link
+                    href={`/products/${kit.id}`}
+                    className="font-display font-semibold text-lg text-text-primary group-hover:text-accent-terracotta transition-colors block"
+                  >
                     {kit.name}
-                  </h3>
+                  </Link>
                 </div>
 
                 {/* Friendly Vibe Tagline */}
@@ -172,18 +176,26 @@ export function CuratedWardrobe({ initialVibe = "all" }: CuratedWardrobeProps) {
                   </div>
                 </div>
 
-                {/* Zalo Direct Instant Hold Button */}
-                <a
-                  href={`${SITE_CONFIG.social.zalo}?text=${encodeURIComponent(
-                    `Chào tiệm Fujime, mình muốn hỏi thuê máy ${kit.name} cho chuyến đi sắp tới ạ.`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full btn-primary-terracotta text-xs py-2.5 justify-center shadow-xs"
-                >
-                  <MessageCircle className="w-3.5 h-3.5" />
-                  <span>{locale === "vi" ? "Nhắn Zalo giữ máy này" : "Reserve Kit on Zalo"}</span>
-                </a>
+                {/* Actions: View Details & Instant Zalo Reserve */}
+                <div className="grid grid-cols-2 gap-2">
+                  <Link
+                    href={`/products/${kit.id}`}
+                    className="btn-secondary-subtle text-xs py-2 justify-center shadow-2xs text-center"
+                  >
+                    <span>{locale === "vi" ? "Chi tiết máy" : "Details"}</span>
+                  </Link>
+                  <a
+                    href={`${SITE_CONFIG.social.zalo}?text=${encodeURIComponent(
+                      `Chào tiệm Fujime, mình muốn hỏi thuê máy ${kit.name} cho chuyến đi sắp tới ạ.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary-terracotta text-xs py-2 justify-center shadow-xs"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5" />
+                    <span>{locale === "vi" ? "Giữ máy" : "Reserve"}</span>
+                  </a>
+                </div>
               </div>
             </article>
           ))}

@@ -3,7 +3,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SITE_CONFIG } from "@/constants/site-config";
 import { STUDIO_SPECS } from "@/constants/homepage-data";
-import { MessageCircle, Check, Phone, Sparkles, MapPin } from "lucide-react";
+import { MessageCircle, Check, Phone, MapPin } from "lucide-react";
 
 export function StudioSpaceFeature() {
   const { locale } = useLanguage();

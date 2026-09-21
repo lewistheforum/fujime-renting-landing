@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Coffee, Heart, Wrench, Sparkles, MapPin } from "lucide-react";
+import { Coffee, Heart, Wrench, MapPin } from "lucide-react";
 
 export function LabStory() {
   const { locale } = useLanguage();
