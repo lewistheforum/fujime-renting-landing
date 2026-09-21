@@ -118,10 +118,9 @@ An 11-token palette inspired by warm photo paper, terracotta pottery, and natura
    - Clean, non-intrusive bottom/corner bar with quick triggers for Zalo, Hotline, and Sơn Trà studio map.
 7. **Bilingual Switcher (VI / EN):**
    - Clean, tactile toggle in header supporting both Vietnamese locals and international travelers.
-8. **Clean Direct 2-Item Header Navigation & Information Architecture:**
-   - Streamlined header featuring exactly 2 direct navigation links: **Trang chủ (Homepage)** and **Sản phẩm (Products)**.
-   - **Homepage (`/`):** Dedicated exclusively to studio identity, creative ecosystem, and services overview (Camera Rental Overview, 360m² Cyclorama Space, Podcast Studio, Video Production Crew, Studio Commitments, and Lab Story).
-   - **Products Page (`/products`):** Dedicated full-catalog destination housing the complete Curated Camera Wardrobe, ready-to-shoot kit details, category filters, transparent daily VND rates, and film simulation lab recipes. Clicking "Sản phẩm" navigates directly to this product catalog.
+8. **Clean Multi-Page Navigation Architecture:**
+   - Nav links: **Trang chủ** (`/`), **Sản phẩm** (`/products`), **Tra cứu** (`/tra-cuu`), **Hướng dẫn** (`/#rental-flow`), **Liên hệ** (`/#contact-concierge`).
+   - Active state styling: Exact route matching (`bg-accent-terracotta text-white font-semibold shadow-xs`), while non-active links have clean subtle hover backgrounds (`hover:text-text-primary hover:bg-surface-raised/80`), preventing color bleeding or broken multi-pill active states.
 9. **Editorial Services Showcase Bento Grid:**
    - Replaces flat, cookie-cutter feature boxes with an asymmetric Bento editorial composition featuring tactile photographic windows for each craft offering.
    - **Flagship Core Service Card (Full-width 12-column hero):** Spotlights Camera Rental & Ready-to-Shoot Kits with authentic equipment showcase photography (`/images/equip-feature28c4.jpg`), vintage scrapbook paper tape accent, pre-loaded film recipe badge, transparent starting daily VND rate, and primary link to `/products`.
@@ -130,6 +129,65 @@ An 11-token palette inspired by warm photo paper, terracotta pottery, and natura
      - *Podcast & Talkshow Set:* Pre-lit acoustic studio photography (`/images/podcast-set6c9c.jpg`) with pro audio details.
      - *Video Production Crew:* Authentic on-location cinema crew photography (`/images/crew-on-location3c9e.jpg`) with 4K/6K & grading specs.
    - Each card features high-contrast ivory tag badges (`bg-surface/95` `#FFF9F2`), tactile rounded geometry (`rounded-3xl`), and responsive padding.
+10. **Featured Products on Homepage (6 Curated Kits + 'Xem thêm'):**
+    - Homepage prominently features exactly 6 ready-to-shoot camera combos in a balanced 3-column grid (`HomeFeaturedProducts`).
+    - Includes a prominent terracotta pill button **"Xem toàn bộ tủ máy & phụ kiện (12+ combo) →"** routing to the full `/products` catalog.
+11. **Real-Time Order Tracking Route (`/tra-cuu` - Analog Rental Passport & Handover Docket):**
+    - A dedicated, lightweight lookup tool crafted as an authentic **Analog Rental Passport & Handover Docket (Phiếu Bàn Giao Thiết Bị & Biên Nhận Ký Gửi)**, unifying previously scattered cards into a single cohesive, tactile ticket experience:
+      - **Master Ticket Container & Paper Notches:** Features a vintage scrapbook paper tape accent on the top edge, perforated dashed tear-line, and circular paper punch-out notches on the left and right flanks.
+      - **Connected 4-Step Film Strip Stepper:** Continuous timeline rail connecting all 4 rental milestones with glowing terracotta progress indicators and milestone timestamps, eliminating disconnected floating dots.
+      - **Integrated Live Countdown Ribbon:** Displays remaining shoot time (e.g., *"Còn 3 ngày 08 giờ 30 phút"*), pickup hour, and strict return deadline with urgent alert indicators.
+      - **Two-Column Analog Layout:**
+        - *Left (Gear & Biometric Identity Passport):* Equipment showcase with high-res photo, preloaded film recipe badge, 100% charged battery & SD check, alongside an authentic verified CCCD ID credential card (spaced 4-digit formatting `0482 0200 8921`, biometric verification badge, and physical custody safety seal).
+        - *Right (Itemized Receipt & Action Protocol):* Itemized pricing slip, daily rates, multi-day discounts, verified deposit terms, and pre-filled 1-click Zalo emergency contact.
+      - **Interactive On-Demand Search State:** Initializes in a clean waiting state (`hasSearched: false`, `query: ""`) with warm guidance tips and sample chips (`FJ-8294`, `FJ-7512`, `FJ-6103`), never flashing customer data prematurely.
+12. **Dedicated Product Detail Experience (`/products/[id]`):**
+    - Dynamic route providing rich details for each camera kit: large authentic photography, preloaded film simulation recipes, full hardware specs (CMOS, IBIS, 4K/6K ProRes), interactive rental day selector (1, 2, 3, 5 days) with automatic 15% discount calculation, and 1-click Zalo booking with pre-filled message.
+13. **Customer Reviews Station Grid:**
+    - Aligned directly below the 3-step rental flow with matching 3-column card topology. Showcases authentic verified customer experiences, star ratings, rented camera models, and aggregate 5.0/5.0 score badge.
+14. **3D Camera Showcase with Smooth Carousel Motion & Clean Pill Selector:**
+    - The interactive hero showcase houses 4 high-fidelity 3D models (`EOS R50`, `R50 White`, `X100VI`, `Pocket 4`).
+    - **Layout Architecture:** The 3D camera container takes full center-stage viewport (`absolute inset-0 z-10 flex items-center justify-center`), while the 4-pill camera selector is positioned strictly absolute and centered at the bottom (`absolute bottom-3 left-1/2 -translate-x-1/2 z-20`), eliminating flex item collision bugs and ensuring both elements are perfectly framed.
+    - **Clean Pill Switcher & Auto-Cycle:** Removed any lingering progress bar elements that previously caused visual glitches during camera transitions. Replaced with clean tactile buttons for the 4 camera models and a smooth 8-second automatic rotation timer managed via React lifecycle hooks (automatically pausing during hover/interaction).
+    - **Carousel Slide Motion:** When switching cameras, the previous model glides smoothly out to the left (`translateX(-55%) scale(0.92)` with `cubic-bezier(0.16, 1, 0.3, 1)`) while the incoming model sweeps in from the right (`translateX(55%) -> 0`), providing an authentic physical carousel swipe feel with high initial velocity that smoothly decelerates to rest.
+15. **Scrapbook Field Notebooks & Mechanical Teardown Guides (`/huong-dan` & `/huong-dan/[id]`):**
+    - Inspired by analog film diaries, student notebooks, and mechanical blueprint sketches (as seen in classic film posters and handcrafted workshop manuals).
+    - **Official Rental Process Page (`/huong-dan/quy-trinh-thue`):**
+      - Authored in authentic analog stationery style detailing the 4 operational rental stages: (1) Check lịch trống & cọc giữ slot máy trước 1 ngày, (2) Hai hình thức nhận máy (trực tiếp tại tiệm Sơn Trà / ship tận nơi kèm chính sách free ship trên 4h và trả phí ship dưới 4h), (3) Quy định giấy tờ tuỳ thân gốc (CCCD gắn chip / Thẻ SV hoặc cọc 100% giá trị máy) và đồng kiểm tra quay chụp tình trạng ngoại quan máy trước khi bàn giao, (4) Trả máy trực tiếp tại tiệm hoàn cọc 5 phút & lưu ý rủi ro khi ship trả máy.
+      - Includes bottom visual journey icons (*1. Giữ slot → 2. Nhận máy → 3. Sáng tạo → 4. Hoàn cọc*) and 1-click Zalo reservation trigger.
+    - **Separate Dedicated Routes per Camera:**
+      - `/huong-dan/fujifilm-x100vi`: Rangefinder dials, EVF/OVF hybrid lever, aperture ring, and film recipes.
+      - `/huong-dan/canon-eos-r50`: Dual Pixel II autofocus, vari-angle screen, red movie button, and close-up demo mode.
+      - `/huong-dan/canon-r50-white`: Pearl white edition, pop-up Y2K flash, and smooth skin portrait sliders.
+      - `/huong-dan/dji-pocket-4`: 3-axis brushless motor gimbal, quick-wake rotating OLED screen, and ActiveTrack 6.0.
+    - **Tactile Paper Aesthetics & Authentic Dog-Ear Page-Curl on Hover:**
+      - Replaced thick dark borders with soft borderless / hairline card contours (`border-border-subtle/25`) and warm paper shadows (`.notebook-paper-sheet`).
+      - **Y2K Holographic Washi Tape (Tape Răng Cưa Hologram):**
+        - Positioned strictly outside `<article className="overflow-hidden">` directly on the parent container, completely eliminating the clipped-tag bug.
+        - Features authentic serrated tape cutter teeth on both flanks, translucent pastel iridescent gradient (`#FDF4EB` / `#EBF4FE` / `#FCEAF2`), a dynamic holographic gloss sheen sweep on hover (`group-hover:translate-x-full duration-700`), and a retro Y2K foil stamp (`✦ FUJIME Y2K · 0{idx + 1} ★`).
+      - **Seamless Dog-Ear Page-Curl on Hover:**
+        - **Synchronized Parent Elevation:** Container-level lift (`.notebook-paper-sheet-container:hover` with `translateY(-6px)`) ensures the card body and the folded flap lift together as one coherent physical sheet with zero vertical displacement.
+        - **Mathematically Mirrored Corner:** When hovered, the top-right corner of the sheet is sliced via `clip-path: polygon(0 0, calc(100% - 44px) 0, 100% 44px, 100% 100%, 0 100%)`. Simultaneously, the mirrored flap (`d="M0 0 L44 44 L16 44 Q0 44 0 28 Z"`) folds down with a rounded tip (`Q 0 44 0 28`), perfectly reflecting the original rounded corner geometry rather than an artificial 90° spike.
+        - **Feathery Soft Diffuse Glow & Zero Overhang (`<clipPath>` + `feGaussianBlur`):** All highlight elements are strictly contained within `<clipPath id="flapClip">`, eliminating protruding white teeth or overflow pixels at the edges. Replaced rigid white stroke lines with a 4.5px blurred diffuse glow (`feGaussianBlur stdDeviation="2.2"`) that gently fades to 0% opacity at both crease terminals, paired with a cylindrical ambient roll shadow (`curlRollShadow`) that gives the paper face natural 3D curvature and softness.
+      - Ruled notebook line background (`.paper-lined-grid`), left red notebook margin rule, washi tape strips (`.tape-strip`), and tilted polaroid photos with tape accents.
+      - Chalk-style dashed mechanical callout circles (`01`, `02`, `03`), color-coded badges, and handwritten-style pro tips (*"💡 Mẹo tiệm"*).
+      - Interactive 3D `<model-viewer>` component embedded directly into each camera guide page for 360° mechanical exploration.
+      - 5-minute quick start field guide for first-time shooters and beginners.
+    16. **Online Camera Booking & VietQR Instant Deposit Checkout (`/dat-hang`):**
+        - **End-to-End Reservation & Payment Architecture:**
+          - **Streamlined Selected Camera Strip (Zero Friction):** Directly receives the selected camera kit from catalog/detail routes (`?kit=...&days=...`) and displays an elegant horizontal summary card (thumbnail, combo name, daily VND rate, badge, and quick switcher dropdown capped at `w-[210px]` with `whitespace-nowrap` labels to prevent any text squashing or layout deformation).
+          - **Clean Organic Hierarchy:** Organic heading typography (*"Phiếu Đăng Ký Thuê Máy"*) without artificial AI pill tags or uppercase eyebrows, maintaining calm editorial warmth and spacious rhythm.
+          - **Smart Time Slot Picker with Live Availability:**
+            - Replaces native dropdowns with a tactile 3x2 grid of time slots (`08:00`, `09:00`, `11:30`, `14:00`, `16:30`, `19:00`).
+            - **Minimalist 2-State Visual System (No Color Clutter):** All cards share a calm neutral surface styling (`bg-surface`, `border-border-subtle`, active state uses terracotta accent border `border-accent-terracotta`). Chromatic variations are strictly isolated to the compact status chips (Trống: emerald, Giữ 15p: amber, Đã kín: stone gray), preventing overwhelming multi-colored button card backgrounds.
+            - Clear visual status for each slot: 🟢 *Sẵn máy (Trống lịch)*, 🟡 *Đang giữ chỗ 15p (Chờ khách hoàn tất cọc)*, and 🔒 *Đã kín (Đã có khách nhận)*.
+            - Rendered both on **Trang Chi Tiết Sản Phẩm (`/products/[id]`)** as a real-time availability preview and on **Trang Đặt Máy (`/dat-hang`)** as an interactive slot selection grid.
+          - **Intuitive 3-Block Booking Flow:**
+            1. *Lịch thuê & Thời gian:* Pill duration selectors (1, 2, 3, 5 days with auto -15% discount for 3+ days), pickup date, visual time slots, and automatic 18:00 return deadline schedule.
+            2. *Thông tin người nhận & Hình thức cọc:* Clean customer contact fields, 2 receiving options (Store pickup at Sơn Trà vs Free-ship delivery), and 2 deposit protocols (CCCD chip card for 100% cash deposit waiver vs equipment value deposit).
+            3. *Hình thức thanh toán cọc:* 200.000đ slot lock deposit (recommended) vs 100% upfront payment.
+          - **Master Docket Receipt & VietQR Generation:** On order submission, renders an authentic perforated physical docket complete with bank transfer credentials (MB Bank `0779771234` · NGUYEN PHUONG NAM), one-click clipboard copy, pre-filled Zalo confirmation dispatch, and dynamically generated VietQR barcode image with exact amount and booking memo.
+          - **System-Wide Removal of Generic Sparkle Icons:** Purged all instances of the generic Lucide `Sparkles` icon across all components, replacing them with authentic camera, check, or clean directional icons.
 
 ---
 

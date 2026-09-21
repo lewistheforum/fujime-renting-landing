@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { SITE_CONFIG } from "@/constants/site-config";
 import { LogIn } from "lucide-react";
 
 export function Header() {
@@ -30,6 +29,46 @@ export function Header() {
     }
   };
 
+  const navLinks = [
+    {
+      href: "/",
+      labelVi: "Trang chủ",
+      labelEn: "Homepage",
+      isActive: pathname === "/",
+      onClick: handleHomeClick,
+    },
+    {
+      href: "/products",
+      labelVi: "Sản phẩm",
+      labelEn: "Products",
+      isActive: pathname.startsWith("/products"),
+    },
+    {
+      href: "/dat-hang",
+      labelVi: "Đặt máy",
+      labelEn: "Book Gear",
+      isActive: pathname.startsWith("/dat-hang"),
+    },
+    {
+      href: "/tra-cuu",
+      labelVi: "Tra cứu",
+      labelEn: "Lookup",
+      isActive: pathname === "/tra-cuu",
+    },
+    {
+      href: "/huong-dan",
+      labelVi: "Hướng dẫn",
+      labelEn: "Guide",
+      isActive: pathname.startsWith("/huong-dan"),
+    },
+    {
+      href: "/#contact-concierge",
+      labelVi: "Liên hệ",
+      labelEn: "Contact",
+      isActive: pathname === "/contact",
+    },
+  ];
+
   return (
     <header
       id="nav"
@@ -53,63 +92,22 @@ export function Header() {
           </span>
         </Link>
 
-        {/* Center: 2 Primary Page Navigation Links (Homepage & Sản phẩm) */}
-        <div className="flex items-center gap-1 sm:gap-2 px-1.5 py-1 rounded-full bg-surface/80 backdrop-blur-md border border-border-subtle shadow-2xs">
-          <Link
-            href="/"
-            onClick={handleHomeClick}
-            className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
-              pathname === "/"
-                ? "bg-accent-terracotta text-white font-semibold shadow-xs"
-                : "text-text-muted hover:text-text-primary hover:bg-surface-raised/60"
-            }`}
-          >
-            {locale === "vi" ? "Trang chủ" : "Homepage"}
-          </Link>
-
-          <Link
-            href="/products"
-            className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
-              pathname.startsWith("/products")
-                ? "bg-accent-terracotta text-white font-semibold shadow-xs"
-                : "text-text-muted hover:text-text-primary hover:bg-surface-raised/60"
-            }`}
-          >
-            {locale === "vi" ? "Sản phẩm" : "Products"}
-          </Link>
-
-          <Link
-            href="/products"
-            className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
-              pathname.startsWith("/products")
-                ? "bg-accent-terracotta text-white font-semibold shadow-xs"
-                : "text-text-muted hover:text-text-primary hover:bg-surface-raised/60"
-            }`}
-          >
-            {locale === "vi" ? "Tra cứu" : "Search"}
-          </Link>
-
-           <Link
-            href="/products"
-            className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
-              pathname.startsWith("/products")
-                ? "bg-accent-terracotta text-white font-semibold shadow-xs"
-                : "text-text-muted hover:text-text-primary hover:bg-surface-raised/60"
-            }`}
-          >
-            {locale === "vi" ? "Hướng dẫn" : "Guidelines"}
-          </Link>
-
-          <Link
-            href="/products"
-            className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
-              pathname.startsWith("/products")
-                ? "bg-accent-terracotta text-white font-semibold shadow-xs"
-                : "text-text-muted hover:text-text-primary hover:bg-surface-raised/60"
-            }`}
-          >
-            {locale === "vi" ? "Liên hệ" : "Contact"}
-          </Link>
+        {/* Center: Navigation Links with Individual Active States & Crisp Hover */}
+        <div className="flex items-center gap-1 sm:gap-1.5 px-1.5 py-1 rounded-full bg-surface/85 backdrop-blur-md border border-border-subtle shadow-2xs">
+          {navLinks.map((link, idx) => (
+            <Link
+              key={idx}
+              href={link.href}
+              onClick={link.onClick}
+              className={`px-3 sm:px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all ${
+                link.isActive
+                  ? "bg-accent-terracotta text-white font-semibold shadow-xs"
+                  : "text-text-muted hover:text-text-primary hover:bg-surface-raised/80"
+              }`}
+            >
+              {locale === "vi" ? link.labelVi : link.labelEn}
+            </Link>
+          ))}
         </div>
 
         {/* Right: Language toggle & Quick Zalo Concierge */}

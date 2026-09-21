@@ -8,9 +8,9 @@ import {
   MessageCircle,
   ArrowRight,
   MapPin,
-  Sparkles,
   BatteryCharging,
   ShieldCheck,
+  Camera,
 } from "lucide-react";
 import { CameraViewer3D } from "./camera-viewer-3d";
 
@@ -130,8 +130,8 @@ export function StudioHero({ onSelectVibe, onOpenReel }: StudioHeroProps) {
                   },
                   {
                     id: "medium-format",
-                    vi: "✨ Studio Lookbook 102MP",
-                    en: "✨ Studio Lookbook",
+                    vi: "📷 Studio Lookbook 102MP",
+                    en: "📷 Studio Lookbook",
                   },
                 ].map((option) => (
                   <button
@@ -192,7 +192,7 @@ export function StudioHero({ onSelectVibe, onOpenReel }: StudioHeroProps) {
                   : "Local hotel delivery"}
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-accent-peach" />
+                <Camera className="w-4 h-4 text-accent-peach" />
                 {locale === "vi"
                   ? "Cài sẵn màu film đẹp"
                   : "Vintage recipes loaded"}

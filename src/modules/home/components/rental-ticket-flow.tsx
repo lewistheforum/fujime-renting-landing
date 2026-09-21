@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Ticket, Search, PackageCheck, Smile, HelpCircle, ShieldCheck } from "lucide-react";
+import { Ticket, Search, PackageCheck, Smile, HelpCircle, ShieldCheck, Star, MessageSquareQuote, CheckCircle2 } from "lucide-react";
 
 export function RentalTicketFlow() {
   const { locale } = useLanguage();
@@ -33,10 +33,48 @@ export function RentalTicketFlow() {
     },
   ];
 
+  const customerReviews = [
+    {
+      id: "rv-1",
+      name: "Ngọc Mai & Hoàng Long",
+      tagVi: "Du lịch Hà Nội · 4 ngày",
+      tagEn: "Travelers from Hanoi",
+      gear: "Fujifilm X-T5 · Classic Chrome",
+      commentVi: "Tụi mình vào Đà Nẵng chơi 4 ngày, thuê chiếc X-T5 của tiệm dạo biển Mỹ Khê và phố cổ Hội An. Anh chủ sạc đầy 2 pin chụp cả ngày không hết, màu Classic Chrome chụp ra tone film cực thơ!",
+      commentEn: "Rented an X-T5 for our 4-day trip to Da Nang and Hoi An. The pre-loaded Classic Chrome film recipe gave us breathtaking nostalgic photos without editing!",
+      avatarBg: "bg-accent-terracotta/15 text-accent-terracotta",
+      stars: 5,
+    },
+    {
+      id: "rv-2",
+      name: "Minh Quân",
+      tagVi: "Sinh viên ĐH Kiến Trúc ĐN",
+      tagEn: "Architecture Student",
+      gear: "Canon EOS M10 · Portrait Kit",
+      commentVi: "Nhóm mình thuê máy chụp kỷ yếu tốt nghiệp. Tiệm hỗ trợ thủ tục cọc thẻ sinh viên siêu nhanh gọn, nhiệt tình chỉ cách bấm máy. Ống xóa phông đẹp mê ly bạn bè ai cũng khen.",
+      commentEn: "We rented for our graduation photo album. Super friendly student deposit policy, pristine gear condition, and dreamy bokeh portraits!",
+      avatarBg: "bg-accent-sage/20 text-accent-sage",
+      stars: 5,
+    },
+    {
+      id: "rv-3",
+      name: "Thảo Vy (Vee.studio)",
+      tagVi: "Local Brand Owner",
+      tagEn: "Fashion Brand Owner",
+      gear: "Studio 360m² + GFX 100 II",
+      commentVi: "Studio tại Sơn Trà không gian trần cao thoáng đãng, phông vô cực trắng tinh tươm. Mình chụp Lookbook mùa mới bằng con GFX 102MP chi tiết vải vóc lên cực kỳ sắc nét!",
+      commentEn: "The 360m² cyclorama studio was pristine and spacious. Rented the 102MP GFX body for our fashion campaign — detail and skin tones were extraordinary!",
+      avatarBg: "bg-accent-peach/25 text-accent-terracotta",
+      stars: 5,
+    },
+  ];
+
   return (
-    <section className="py-20 md:py-28 bg-bg-ground relative" id="rental-flow">
+    <section className="py-20 md:py-28 bg-bg-ground relative border-t border-border-subtle" id="rental-flow">
       <div className="container-editorial">
-        {/* Section Header */}
+        {/* ============================================================ */}
+        {/* BLOCK 1: THỦ TỤC THUÊ MÁY ĐƠN GIẢN                           */}
+        {/* ============================================================ */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 mb-3">
             <Ticket className="w-4 h-4 text-accent-terracotta" />
@@ -57,8 +95,8 @@ export function RentalTicketFlow() {
           </p>
         </div>
 
-        {/* The 3-Station Ticket Strip (Original Horizontal / Vertical Connected Flow) */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        {/* The 3-Station Ticket Strip */}
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           {stations.map((st, idx) => {
             const Icon = st.icon;
             return (
@@ -95,7 +133,7 @@ export function RentalTicketFlow() {
         </div>
 
         {/* Deposit Policy Notice Box (Friendly for Gen Z & Students) */}
-        <div className="max-w-3xl mx-auto p-5 sm:p-6 rounded-2xl bg-surface border border-border-subtle flex items-start gap-4 shadow-xs">
+        <div className="max-w-3xl mx-auto p-5 sm:p-6 rounded-2xl bg-surface border border-border-subtle flex items-start gap-4 shadow-xs mb-20 md:mb-28">
           <div className="w-10 h-10 rounded-xl bg-accent-peach/20 grid place-items-center text-accent-terracotta shrink-0 mt-0.5">
             <HelpCircle className="w-5 h-5" />
           </div>
@@ -114,6 +152,95 @@ export function RentalTicketFlow() {
                 : "Choose between original Citizen ID / Student ID, or flexible deposit depending on kit value. We provide clear handover agreements with zero hidden costs!"}
             </p>
           </div>
+        </div>
+
+        {/* ============================================================ */}
+        {/* BLOCK 2: REVIEW ĐÁNH GIÁ TỪ KHÁCH HÀNG (CÙNG LAYOUT STATION) */}
+        {/* ============================================================ */}
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <MessageSquareQuote className="w-4 h-4 text-accent-terracotta" />
+            <span className="font-mono text-xs uppercase tracking-widest text-accent-terracotta font-semibold">
+              {locale === "vi" ? "TRẢI NGHIỆM THỰC TẾ TỪ KHÁCH THUÊ" : "REAL FEEDBACK FROM RENTERS"}
+            </span>
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-text-primary leading-tight">
+            {locale === "vi" ? "Cảm nhận những bức hình" : "Stories & memorable frames"}{" "}
+            <span className="font-display italic font-normal text-accent-terracotta block sm:inline">
+              {locale === "vi" ? "thơ cùng Fujime." : "captured with us."}
+            </span>
+          </h2>
+          <p className="text-text-muted text-sm sm:text-base mt-3 font-light leading-relaxed">
+            {locale === "vi"
+              ? "Hơn 500+ chuyến đi, kỷ yếu và dự án sáng tạo đã bấm máy trọn vẹn tại Đà Nẵng & Hội An."
+              : "Over 500+ travel diaries, graduations, and commercial shoots captured across Da Nang & Hoi An."}
+          </p>
+        </div>
+
+        {/* 3 Customer Review Cards (Y hệt format station 3 cột) */}
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          {customerReviews.map((rv, idx) => (
+            <div
+              key={rv.id}
+              className="card-surface p-6 sm:p-7 rounded-2xl border border-border-subtle flex flex-col justify-between relative shadow-xs hover:border-accent-terracotta/40 transition-all group"
+            >
+              <div>
+                {/* Header: Avatar + Stars */}
+                <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-11 h-11 rounded-xl grid place-items-center font-display font-bold text-sm ${rv.avatarBg}`}>
+                      {rv.name.charAt(0)}
+                    </div>
+                    <div>
+                      <h3 className="font-display font-semibold text-base text-text-primary">
+                        {rv.name}
+                      </h3>
+                      <span className="text-[11px] font-mono text-text-muted block">
+                        {locale === "vi" ? rv.tagVi : rv.tagEn}
+                      </span>
+                    </div>
+                  </div>
+
+                  <span className="font-mono text-xl font-bold text-accent-terracotta/20">
+                    0{idx + 1}
+                  </span>
+                </div>
+
+                {/* Rating 5 stars */}
+                <div className="flex items-center gap-1 mb-3 text-amber-500">
+                  {[...Array(rv.stars)].map((_, sIdx) => (
+                    <Star key={sIdx} className="w-3.5 h-3.5 fill-current" />
+                  ))}
+                  <span className="font-mono text-xs text-text-primary font-semibold ml-1">5.0</span>
+                </div>
+
+                {/* Feedback Quote */}
+                <p className="text-text-muted text-xs sm:text-sm font-light leading-relaxed italic mb-4">
+                  &ldquo;{locale === "vi" ? rv.commentVi : rv.commentEn}&rdquo;
+                </p>
+              </div>
+
+              {/* Footer Gear Used Tag */}
+              <div className="mt-4 pt-4 border-t border-border-subtle/50 text-[11px] font-mono text-accent-terracotta flex items-center justify-between">
+                <span className="truncate pr-2">✦ {rv.gear}</span>
+                <span className="text-accent-sage shrink-0 flex items-center gap-1">
+                  <CheckCircle2 className="w-3 h-3 text-accent-sage" />
+                  {locale === "vi" ? "Đã thuê" : "Verified"}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Aggregate Score Pill Footer */}
+        <div className="max-w-xl mx-auto p-4 rounded-full bg-surface border border-border-subtle flex items-center justify-center gap-3 shadow-2xs text-xs font-mono text-text-muted text-center">
+          <div className="flex text-amber-500">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-3.5 h-3.5 fill-current" />
+            ))}
+          </div>
+          <span className="font-semibold text-text-primary">5.0 / 5.0</span>
+          <span>· Đánh giá từ 178+ lượt khách thuê tại Đà Nẵng</span>
         </div>
       </div>
     </section>
